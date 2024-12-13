@@ -25,7 +25,7 @@ function NoteModal({ onClose }) {
     formData.append('image', noteImg); // Append the image file
 
     try {
-      await axios.post('http://localhost:3000/api/users/note/add', formData, {
+      await axios.post('https://memory-vault-backend.vercel.app/api/users/note/add', formData, {
         headers: {
           'Content-Type': 'multipart/form-data',
           Authorization: `Bearer ${localStorage.getItem('token')}`,

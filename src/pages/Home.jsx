@@ -58,7 +58,7 @@ const Home = () => {
 
   const fetchTask = async () => {
     try {
-      const response = await axios.get('http://localhost:3000/api/users/task/mytask', {
+      const response = await axios.get('https://memory-vault-backend.vercel.app/api/users/task/mytask', {
         headers: {
           Authorization: `Bearer ${localStorage.getItem('token')}`,
         },
@@ -79,7 +79,7 @@ const Home = () => {
   const addTask = async (title, priority,deadline) => {
     try {
       const response = await axios.post(
-        'http://localhost:3000/api/users/task/add',
+        'https://memory-vault-backend.vercel.app/api/users/task/add',
         { title, priority,deadline },
         {
           headers: {
@@ -99,7 +99,7 @@ const Home = () => {
   const updateTask = async (id, title, priority,deadline) => {
     try {
       const response = await axios.put(
-        `http://localhost:3000/api/users/task/update/${id}`,
+        `https://memory-vault-backend.vercel.app/api/users/task/update/${id}`,
         { title, priority },
         {
           headers: {
@@ -119,7 +119,7 @@ const Home = () => {
   const deleteTask = async (id) => {
     try {
       const response = await axios.delete(
-        `http://localhost:3000/api/users/task/delete/${id}`,
+        `https://memory-vault-backend.vercel.app/api/users/task/delete/${id}`,
         {
           headers: {
             Authorization: `Bearer ${localStorage.getItem('token')}`,

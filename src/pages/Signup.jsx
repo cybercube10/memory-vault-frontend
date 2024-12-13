@@ -11,7 +11,7 @@ function Signup() {
   const handleSubmit = async(e)=>{
     e.preventDefault()
     try {
-      const response = await axios.post('http://localhost:3000/api/users/register',{name,email,password})
+      const response = await axios.post('https://memory-vault-backend.vercel.app/api/users/register',{name,email,password})
       
       if(response.data.success){
         navigate('/login')

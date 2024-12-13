@@ -13,7 +13,7 @@ const ProfileManager = () => {
       if (!token) return;
 
       setLoading(true);
-      const response = await axios.get('http://localhost:3000/api/users/profile-pic', {
+      const response = await axios.get('https://memory-vault-backend.vercel.app/api/users/profile-pic', {
         headers: {
           Authorization: `Bearer ${token}`,
         },
@@ -59,7 +59,7 @@ const ProfileManager = () => {
 
     try {
       const response = await axios.post(
-        'http://localhost:3000/api/users/add/upload-profile-pic',
+        'https://memory-vault-backend.vercel.app/api/users/add/upload-profile-pic',
         formData,
         {
           headers: {

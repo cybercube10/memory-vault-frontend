@@ -12,7 +12,7 @@ function Login() {
   const handleSubmit = async(e)=>{
     e.preventDefault()
     try {
-      const response = await axios.post('http://localhost:3000/api/users/login',{email,password})
+      const response = await axios.post('https://memory-vault-backend.vercel.app/api/users/login',{email,password})
       
       if(response.data.success){
         localStorage.setItem('token',response.data.token) 

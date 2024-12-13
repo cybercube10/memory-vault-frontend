@@ -19,7 +19,7 @@ const MemoriesGrid = () => {
   // Fetch Notes from the backend
   const fetchNotes = async () => {
     try {
-      const response = await axios.get('http://localhost:3000/api/users/note/mynotes', {
+      const response = await axios.get('https://memory-vault-backend.vercel.app/api/users/note/mynotes', {
         headers: {
           Authorization: `Bearer ${localStorage.getItem('token')}`,
         },
@@ -40,7 +40,7 @@ const MemoriesGrid = () => {
       formData.append('description', newMemory.description);
       formData.append('image', newMemory.image);
 
-      const response = axios.post('http://localhost:3000/api/users/note/add', formData, {
+      const response = axios.post('https://memory-vault-backend.vercel.app/api/users/note/add', formData, {
         headers: {
           Authorization: `Bearer ${localStorage.getItem('token')}`,
           'Content-Type': 'multipart/form-data',
@@ -60,7 +60,7 @@ const MemoriesGrid = () => {
   // Handle Delete Note
   const handleDelete = async (id) => {
     try {
-      await axios.delete(`http://localhost:3000/api/users/note/delete/${id}`, {
+      await axios.delete(`https://memory-vault-backend.vercel.app/api/users/note/delete/${id}`, {
         headers: {
           Authorization: `Bearer ${localStorage.getItem('token')}`,
         },
@@ -93,7 +93,7 @@ const MemoriesGrid = () => {
         formData.append('image', newMemory.image);
       }
 
-      await axios.put(`http://localhost:3000/api/users/note/update/${editingId}`, formData, {
+      await axios.put(`https://memory-vault-backend.vercel.app/api/users/note/update/${editingId}`, formData, {
         headers: {
           Authorization: `Bearer ${localStorage.getItem('token')}`,
           'Content-Type': 'multipart/form-data',
@@ -164,7 +164,7 @@ const MemoriesGrid = () => {
               className="bg-white rounded-lg shadow-md overflow-hidden group relative"
             >
               <img
-                src={memory.image ? `http://localhost:3000/${memory.image}` : '/api/placeholder/300/200'}
+                src={memory.image ? `https://memory-vault-backend.vercel.app/${memory.image}` : '/api/placeholder/300/200'}
                 alt={memory.title}
                 className="w-full h-48 object-cover"
               />
