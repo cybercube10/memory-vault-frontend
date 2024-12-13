@@ -1,0 +1,57 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities; 
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: #FEFBEA;
+}
+.bg-olive {
+  background-color: #93C572; /* Olive green */
+}
+.bg-biege{
+  background-color: #e9e2cd;
+}
+.crayon-bg {
+  display: inline-block; /* Shrinks the width to fit the content */
+  background: linear-gradient(45deg, #f9e7d9, #fbd4b4); /* Light crayon-like colors */
+  color: #333; /* Text color for readability */
+  padding: 5px 10px; /* Adjust padding to your liking */
+  border-radius: 8px;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+  border: 1px solid #f8c291; /* Crayon-colored border */
+  background-clip: padding-box;
+} 
+
+/* src/styles/CalendarWidget.css */
+.calendar-widget {
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  padding: 10px;
+  width: 100%; /* Full width of the container */
+  max-width: 300px; /* Optional: adjust based on preference */
+  height: 100%;
+  margin: 0 auto;
+}
+.border-olive {
+  border-color: #808000; /* Olive green */
+}
+
+.react-calendar {
+  border: none;
+  font-family: 'Arial', sans-serif;
+}
+
+.react-calendar__tile {
+  border-radius: 50%;
+}
+
+.react-calendar__tile--active {
+  background-color: #ff63c3; /* Highlight color */
+  color: white;
+}
+
+
+.bg-sea{
+  background-color: #AFE1AF;
+}
